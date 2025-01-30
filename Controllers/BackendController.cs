@@ -53,7 +53,7 @@ namespace aspauthtest.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [Produces("application/json")]
         [EnableCors]
-        public ActionResult<ApiInfo> get(string id)
+        public IActionResult get(string id)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace aspauthtest.Controllers
 
                 if (_db.insertOrUpdateData(null, data, out error))
                 {
-                    return Ok("Daten eingefügt");
+                    return Ok("Daten eingefÃ¼gt");
                 }
                 else
                 {
@@ -179,7 +179,7 @@ namespace aspauthtest.Controllers
                 string error;
                 if (_db.deleteData(id, out error))
                 {
-                    return Ok("Daten gelöscht");
+                    return Ok("Daten gelÃ¶scht");
                 }
                 else
                 {
